@@ -9,7 +9,12 @@ public class Quiz : MonoBehaviour
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
     QuestionSO currentQuestion;
 
-    
+    [Header("Answers")]
+    [SerializeField] GameObject[] answerButtons;
+    int correctAnswerIndex;
+    bool hasAnsweredEarly;
+
+
     void Start()
     {
         timer = FindObjectOfType<Timer>();
