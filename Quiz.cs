@@ -11,6 +11,23 @@ public class Quiz : MonoBehaviour
         questionText.text = question.GetQuestion();
     }
 
+    void Update()
+    {
+        timerImage.fillAmount = timer.fillFraction;
+
+        if (timer.loadNextQuestion)
+        {
+            hasAnsweredEarly = false;
+            GetNextQuestion();
+            timer.loadNextQuestion = false;
+        }
+        else if (!hasAnsweredEarly && !timer.isAnsweringQuestion)
+        {
+            DisplayAnswer(-1);
+            SetButtonState(false);
+        }
+    }
+
     public void OnAnswerSelected(int index)
     {
         hasAnsweredEarly = true;
