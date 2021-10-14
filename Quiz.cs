@@ -65,4 +65,13 @@ public class Quiz : MonoBehaviour
             button.interactable = state;
         }
     }
+
+    void SetDefaultButtonSprites()
+    {
+        for (int i = 0; i <answerButtons.Length; i++) 
+        {
+            Image buttonImage = answerButtons[i].GetComponent<Image>();
+            buttonImage.sprite = defaultAnswerSprite;
+        }
+    }
 }
