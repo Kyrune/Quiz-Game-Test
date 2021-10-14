@@ -18,6 +18,10 @@ public class Quiz : MonoBehaviour
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
 
+    [Header("Timer")]
+    [SerializeField] Image timerImage;
+    Timer timer;
+
     void Start()
     {
         timer = FindObjectOfType<Timer>();
