@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Quiz : MonoBehaviour
 {
+    [Header("Qurestions")]
     [SerializeField] TextMeshProUGUI questionText;
-    [SerializeField] QuestionSO question;
+    [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
+    QuestionSO currentQuestion;
+
+    
     void Start()
     {
         timer = FindObjectOfType<Timer>();
