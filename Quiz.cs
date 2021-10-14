@@ -14,6 +14,9 @@ public class Quiz : MonoBehaviour
     int correctAnswerIndex;
     bool hasAnsweredEarly;
 
+    [Header("Button Colors")]
+    [SerializeField] Sprite defaultAnswerSprite;
+    [SerializeField] Sprite correctAnswerSprite;
 
     void Start()
     {
