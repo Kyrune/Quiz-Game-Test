@@ -11,6 +11,20 @@ public class Quiz : MonoBehaviour
         questionText.text = question.GetQuestion();
     }
 
+    public void OnAnswerSelected(int index)
+    {
+        hasAnsweredEarly = true;
+        DisplayAnswer(index);
+        SetButtonState(false);
+        timer.CancelTimer();
+        scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
+
+        if (progressBar.value == progressBar.maxValue)
+        {
+            isComplete = true;
+        }
+    }
+
     void DisplayAnswer(int index)
     {
         Image buttonImage;
