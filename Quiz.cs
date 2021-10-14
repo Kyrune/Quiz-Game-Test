@@ -45,4 +45,15 @@ public class Quiz : MonoBehaviour
             buttonImage.sprite = correctAnswerSprite;
         }
     }
+
+    void DisplayQuestion()
+    {
+        questionText.text = currentQuestion.GetQuestion();
+
+        for(int i = 0; i < answerButtons.Length; i++)
+        {
+            TextMeshProUGUI buttonText = answerButtons[i].GetComponentInChildren<TextMeshProUGUI>(); 
+            buttonText.text = currentQuestion.GetAnswer(i);
+        }  
+    }
 }
