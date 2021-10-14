@@ -29,6 +29,8 @@ public class Quiz : MonoBehaviour
     [Header("Progress Bar")]
     [SerializeField] Slider progressBar;
 
+    public bool isComplete;
+
     void Start()
     {
         timer = FindObjectOfType<Timer>();
