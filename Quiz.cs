@@ -46,6 +46,17 @@ public class Quiz : MonoBehaviour
         }
     }
 
+    void GetRandomQuestion()
+    {
+        int index = Random.Range(0, questions.Count);
+        currentQuestion = questions[index];
+
+        if (questions.Contains(currentQuestion))
+        {
+            questions.Remove(currentQuestion);
+        }
+    }
+
     void DisplayQuestion()
     {
         questionText.text = currentQuestion.GetQuestion();
