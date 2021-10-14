@@ -26,6 +26,9 @@ public class Quiz : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     ScoreKeeper scoreKeeper;
 
+    [Header("Progress Bar")]
+    [SerializeField] Slider progressBar;
+
     void Start()
     {
         timer = FindObjectOfType<Timer>();
