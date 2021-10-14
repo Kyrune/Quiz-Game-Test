@@ -8,7 +8,10 @@ public class Quiz : MonoBehaviour
     [SerializeField] QuestionSO question;
     void Start()
     {
-        questionText.text = question.GetQuestion();
+        timer = FindObjectOfType<Timer>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        progressBar.maxValue = questions.Count;
+        progressBar.value = 0;
     }
 
     void Update()
