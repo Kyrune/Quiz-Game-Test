@@ -46,6 +46,19 @@ public class Quiz : MonoBehaviour
         }
     }
 
+    void GetNextQuestion()
+    {
+        if (questions.Count > 0)
+        {
+            SetButtonState(true);
+            SetDefaultButtonSprites();
+            GetRandomQuestion();
+            DisplayQuestion();
+            progressBar.value++;
+            scoreKeeper.IncrementQuestionsSeen();
+        }
+    }
+
     void GetRandomQuestion()
     {
         int index = Random.Range(0, questions.Count);
