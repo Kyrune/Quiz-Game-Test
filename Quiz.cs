@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
@@ -50,7 +52,7 @@ public class Quiz : MonoBehaviour
                 isComplete = true;
                 return;
             }
-            
+
             hasAnsweredEarly = false;
             GetNextQuestion();
             timer.loadNextQuestion = false;
