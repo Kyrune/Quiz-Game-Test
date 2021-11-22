@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EndScreen : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI finalScoreText;
     ScoreKeeper scoreKeeper;
 
     void Awake()
