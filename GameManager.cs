@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (quiz.isComplete)
+        {
+            quiz.gameObject.SetActive(false);
+            endScreen.gameObject.SetActive(true);
+            endScreen.ShowFinalScore();
+        }
     }
 }
