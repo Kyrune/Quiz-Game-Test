@@ -28,4 +28,9 @@ public class GameManager : MonoBehaviour
             endScreen.ShowFinalScore();
         }
     }
+
+    public void OnReplayLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
