@@ -45,6 +45,12 @@ public class Quiz : MonoBehaviour
 
         if (timer.loadNextQuestion)
         {
+            if (progressBar.value == progressBar.maxValue)
+            {
+                isComplete = true;
+                return;
+            }
+            
             hasAnsweredEarly = false;
             GetNextQuestion();
             timer.loadNextQuestion = false;
