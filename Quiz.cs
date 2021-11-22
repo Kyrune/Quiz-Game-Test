@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Quiz : MonoBehaviour
 {
-    [Header("Qurestions")]
+    [Header("Questions")]
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
     QuestionSO currentQuestion;
