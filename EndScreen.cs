@@ -12,5 +12,9 @@ public class EndScreen : MonoBehaviour
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
-
+    public void ShowFinalScore()
+    {
+        finalScoreText.text = "Congratulations!\nYou got a score of " + 
+                                scoreKeeper.CalculateScore() + "%";
+    }
 }
