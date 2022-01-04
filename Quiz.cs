@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
+    // Headers categorize in QuizCanvas Quiz (Script)
     [Header("Questions")]
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
