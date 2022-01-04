@@ -11,4 +11,9 @@ public class ScoreKeeper : MonoBehaviour
     {
         return correctAnswers;
     }
+
+    public void IncrementCorrectAnswers()
+    {
+        correctAnswers++;
+    }
 }
