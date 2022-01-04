@@ -7,6 +7,7 @@ public class ScoreKeeper : MonoBehaviour
     int correctAnswers = 0;
     int questionsSeen = 0;
 
+    // Getter method
     public int GetCorrectAnswers()
     {
         return correctAnswers;
@@ -16,7 +17,8 @@ public class ScoreKeeper : MonoBehaviour
     {
         correctAnswers++;
     }
-
+    
+    // Getter method
     public int GetQuestionsSeen()
     {
         return questionsSeen;
