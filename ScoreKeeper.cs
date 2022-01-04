@@ -13,6 +13,7 @@ public class ScoreKeeper : MonoBehaviour
         return correctAnswers;
     }
 
+    // Setter method
     public void IncrementCorrectAnswers()
     {
         correctAnswers++;
@@ -24,6 +25,7 @@ public class ScoreKeeper : MonoBehaviour
         return questionsSeen;
     }
 
+    // Setter method
     public void IncrementQuestionsSeen()
     {
         questionsSeen++;
