@@ -21,4 +21,9 @@ public class ScoreKeeper : MonoBehaviour
     {
         return questionsSeen;
     }
+
+    public void IncrementQuestionsSeen()
+    {
+        questionsSeen++;
+    }
 }
